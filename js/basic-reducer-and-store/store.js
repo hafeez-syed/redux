@@ -1,5 +1,6 @@
-const counterReducer = require('./counter-reducer');
-const { createStore } = require('./lib/redux');
+/*
+const counterReducer = require('../counter-reducer');
+const { createStore } = require('../lib/redux');
 const store = createStore(counterReducer);
 
 setTimeout(function() {
@@ -14,3 +15,4 @@ setTimeout(function() {
 		store.dispatch({type: 'INCREMENT'});
 	});
 }, 500);
+*/

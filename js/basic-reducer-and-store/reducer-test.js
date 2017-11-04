@@ -1,7 +1,8 @@
+/*
 let action;
 let assert;
 
-const counterReducer = require('./counter-reducer');
+const counterReducer = require('../counter-reducer');
 
 action = {
 	type: 'INCREMENT'
@@ -29,3 +30,4 @@ action = {
 
 assert = counterReducer(undefined, action);
 console.log(`expect result ${assert} === 0: ` ,  assert === 0);
+*/
