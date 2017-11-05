@@ -1,43 +1,32 @@
-const counterReducer = require('./counter-reducer');
-const ReactDOM = require('./lib/react-dom');
-const React = require('./lib/react');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import CreateCustomStore from './custom-store';
+import { CounterReducer } from './counter-reducer';
+import { Counter } from './components/counter';
+import { ACTION_COUNTER } from './actions/counter';
 
-const createStore = (reducer) => {
-	let state;
-	let listeners = [];
-
-	const getState = () => state;
-
-	const dispatch = (action) => {
-		state = reducer(state, action);
-		listeners.forEach(listener => listener())
-	};
-
-	const subscribe = (listener) => {
-		listeners.push(listener);
-		return () => {
-			listeners = listeners.filter(l => l !== listener);
-		};
-	};
-
-	dispatch({});
-
-	return {getState, dispatch, subscribe};
+const onAdd = () => {
+	store.dispatch(ACTION_COUNTER().add);
 };
-
-const Counter = ({value}) => (
-	<h1>{value}</h1>
-);
-
-const store = createStore(counterReducer);
+const onSubtract = () => {
+	store.dispatch(ACTION_COUNTER().subtract);
+};
 
 const render = () => {
 	ReactDOM.render(
-		<Counter value={store.getState()} />,
-		document.getElementsById('root')
+		<Counter
+			value={store.getState()}
+		    onAdd={onAdd}
+			onSubtract={onSubtract}
+		/>,
+		document.getElementById('root')
 	);
 };
 
+// CreateCustomStore is similar to Redux's createStore
+const store = CreateCustomStore(CounterReducer);
 store.subscribe(render);
 
 render();
+
+export { CounterReducer };

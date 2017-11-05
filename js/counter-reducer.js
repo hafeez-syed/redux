@@ -12,4 +12,4 @@ const CounterReducer = (previousState = 0, action) => {
 	return state;
 };
 
-module.exports = CounterReducer;
+export {CounterReducer};
