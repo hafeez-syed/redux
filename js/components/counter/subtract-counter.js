@@ -4,4 +4,4 @@ const SubtractCounter = ({decrement}) => (
 	<button onClick={decrement} title="Subtract Counter"> - </button>
 );
 
-export { SubtractCounter };
+export default SubtractCounter;

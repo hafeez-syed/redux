@@ -4,4 +4,4 @@ const AddCounter = ({increment}) => (
 	<button onClick={increment} title="Add Counter"> + </button>
 );
 
-export { AddCounter };
+export default AddCounter;

@@ -1,32 +1,62 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CreateCustomStore from './custom-store';
-import { CounterReducer } from './counter-reducer';
-import { Counter } from './components/counter';
+import { CounterReducer, TodoReducer } from './reducers/';
+import { Counter, Todo } from './components/';
 import { ACTION_COUNTER } from './actions/counter';
+import { ACTION_TODO } from './actions/todo';
 
-const onAdd = () => {
-	store.dispatch(ACTION_COUNTER().add);
-};
-const onSubtract = () => {
-	store.dispatch(ACTION_COUNTER().subtract);
+// CreateCustomStore is similar to Redux's createStore
+const counterStore = CreateCustomStore(CounterReducer);
+const todoStore = CreateCustomStore(TodoReducer);
+
+const onAddCounter = () => {
+	counterStore.dispatch(ACTION_COUNTER().add);
 };
 
-const render = () => {
-	ReactDOM.render(
-		<Counter
-			value={store.getState()}
-		    onAdd={onAdd}
-			onSubtract={onSubtract}
-		/>,
-		document.getElementById('root')
+const onSubtractCounter = () => {
+	if (counterStore.getState() > 0) {
+		counterStore.dispatch(ACTION_COUNTER().subtract);
+	}
+};
+
+const onAddTodo = () => {
+	todoStore.dispatch(
+		{
+			id: 1,
+			type: 'ADD_TODO',
+			text: 'Learn React'
+		}
 	);
 };
 
-// CreateCustomStore is similar to Redux's createStore
-const store = CreateCustomStore(CounterReducer);
-store.subscribe(render);
+const renderCounter = () => {
+	ReactDOM.render(
+		<Counter
+			value={counterStore.getState()}
+		    onAdd={onAddCounter}
+			onSubtract={onSubtractCounter}
+		/>,
+		document.getElementById('counter')
+	);
+};
 
-render();
+const renderTodo = () => {
+	console.log(todoStore.getState());
+	ReactDOM.render(
+		<Todo
+			list={todoStore.getState()}
+			addTodo={onAddTodo}
+		/>,
+		document.getElementById('todo-list')
+	);
+};
 
-export { CounterReducer };
+counterStore.subscribe(renderCounter);
+counterStore.dispatch(ACTION_COUNTER().add);
+
+todoStore.subscribe(renderTodo);
+todoStore.dispatch(ACTION_TODO().add);
+
+
+export { CounterReducer, TodoReducer };

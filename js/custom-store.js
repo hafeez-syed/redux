@@ -16,8 +16,6 @@ const createCustomStore = (reducer) => {
 		};
 	};
 
-	dispatch({});
-
 	return {getState, dispatch, subscribe};
 };
 
