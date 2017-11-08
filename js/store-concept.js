@@ -5,6 +5,7 @@ import { CounterReducer, TodoReducer } from './reducers/';
 import { Counter, Todo } from './components/';
 import { ACTION_COUNTER } from './actions/counter';
 import { ACTION_TODO } from './actions/todo';
+import styles from '../css/styles.css';
 
 // CreateCustomStore is similar to Redux's createStore
 const counterStore = CreateCustomStore(CounterReducer);

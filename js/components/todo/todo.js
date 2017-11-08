@@ -7,7 +7,10 @@ const Todo = ({list, addTodo}) => (
 		<AddTodo onAdd={addTodo} />
 		<ul>
 			{list.map((ls) => (
-				<li key={ls.id}>{ls.text}</li>
+				<li key={ls.id}>
+					<span>Text: {ls.text}</span>
+					<span>Completed: {ls.completed}</span>
+				</li>
 			))}
 		</ul>
 	</div>

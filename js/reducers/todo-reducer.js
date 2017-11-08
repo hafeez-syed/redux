@@ -6,7 +6,7 @@ const TodoReducer = (state = [], action) => {
 				{
 					id: action.id,
 					text: action.text,
-					completed: false
+					completed: true
 				}
 			];
 		default:

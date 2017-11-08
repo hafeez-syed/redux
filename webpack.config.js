@@ -11,7 +11,13 @@ module.exports = {
 				loader: 'babel-loader',
 				query: {
 					presets: ['es2015', 'react']
-				}
+				},
+				include: __dirname + '/js',
+			},
+			{
+				test: /\.css$/,
+				loader: [ 'style-loader', 'css-loader' ],
+				include: __dirname + '/css',
 			}
 		]
 	}

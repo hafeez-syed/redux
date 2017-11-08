@@ -1,0 +1,19 @@
+#counter {
+
+}
+
+#todo-list {
+    font-family: "Anonymous Pro for Powerline";
+}
+
+#todo-list li {
+    background-color: azure;
+    border: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#todo-list span {
+    height: 50px;
+    display: block;
+}
