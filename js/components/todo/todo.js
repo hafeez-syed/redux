@@ -9,7 +9,7 @@ const Todo = ({list, addTodo}) => (
 			{list.map((ls) => (
 				<li key={ls.id}>
 					<span>Text: {ls.text}</span>
-					<span>Completed: {ls.completed}</span>
+					<span className={ls.completed ? '': 'strike-through'}>Completed: {ls.completed.toString()}</span>
 				</li>
 			))}
 		</ul>

@@ -17,3 +17,7 @@
     height: 50px;
     display: block;
 }
+
+.strike-through {
+    text-decoration: line-through;
+}
