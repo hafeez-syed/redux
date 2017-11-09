@@ -31,6 +31,15 @@ const onAddTodo = () => {
 	);
 };
 
+const completeTodo = (id) => {
+	todoStore.dispatch(
+		{
+			id: id,
+			type: 'TOGGLE_TODO'
+		}
+	);
+};
+
 const renderCounter = () => {
 	ReactDOM.render(
 		<Counter
@@ -43,11 +52,11 @@ const renderCounter = () => {
 };
 
 const renderTodo = () => {
-	console.log(todoStore.getState());
 	ReactDOM.render(
 		<Todo
 			list={todoStore.getState()}
 			addTodo={onAddTodo}
+			completeTodo={completeTodo}
 		/>,
 		document.getElementById('todo-list')
 	);
