@@ -1,9 +1,11 @@
-#counter {
+body {
+    font-family: Calibri;
+}
 
+#counter {
 }
 
 #todo-list {
-    font-family: "Anonymous Pro for Powerline";
 }
 
 #todo-list li {
@@ -14,8 +16,8 @@
 }
 
 #todo-list span {
-    height: 50px;
     display: block;
+    height: 50px;
 }
 
 .strike-through {
