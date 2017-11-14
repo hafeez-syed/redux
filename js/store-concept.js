@@ -4,7 +4,7 @@ import CreateCustomStore from './custom-store';
 import { CounterReducer, TodoReducer } from './reducers/';
 import { Counter, Todo } from './components/';
 import { ACTION_COUNTER } from './actions/counter';
-import { ACTION_TODO } from './actions/todo';
+import { ACTION_ADD_TODO, ACTION_TOGGLE_TODO } from './actions/todo';
 import { createStore } from 'redux';
 import styles from '../css/styles.css';
 
@@ -77,7 +77,7 @@ counterStore.dispatch(ACTION_COUNTER().add);
 
 todoStore.subscribe(renderTodo);
 console.log('Dispatching ADD_TODO:');
-todoStore.dispatch(ACTION_TODO().add);
+todoStore.dispatch(ACTION_ADD_TODO());
 console.log('Current state:');
 console.log(todoStore.getState());
 console.log('-------------------');
