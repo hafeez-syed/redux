@@ -5,8 +5,10 @@ const Main = React.createClass({
     render() {
         return(
             <div>
-                <Link to="/">Reduxstagram </Link>
-            </div> 
+                <h1>
+                    <Link to="/">Reduxstagram </Link>
+                </h1>
+            </div>
         )
     }
 });
