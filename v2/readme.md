@@ -1,4 +1,4 @@
-# Redux
+# Reduxstagram
 
 A simple React + Redux implementation.
 
@@ -11,3 +11,11 @@ Then run `npm start` and open <localhost:7770> in your browser.
 ## Production Build
 
 Run `npm build` to create a distro folder and a bundle.js file.
+
+## Screenshots
+
+Home
+![Reduxstagram home](https://github.com/hafeez-syed/redux/tree/master/v2/screenshots/home.png)
+
+Details
+![Reduxstagram details](https://github.com/hafeez-syed/redux/tree/master/v2/screenshots/details.png)
