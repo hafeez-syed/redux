@@ -6,11 +6,13 @@ A simple React + Redux implementation.
 
 First `npm install` to grab all the necessary dependencies. 
 
-Then run `npm start` and open <localhost:7770> in your browser.
+Then run `npm start` and open <localhost:3000> in your browser.
 
 ## Production Build
 
-Run `npm build` to create a distro folder and a bundle.js file.
+Run `npm run build` to create a `build` folder.
+
+To See the production app running run `npm run serve` and open <localhost:5000> in your browser.
 
 ## Screenshots
 

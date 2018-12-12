@@ -1,13 +1,12 @@
-// let's go!
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 
-import css from './styles/style.styl';
+import './styles/css/style.css';
 
-import { App, Main, Single, PhotoGrid } from './components/';
+import { App, Single, PhotoGrid } from './components/';
 
 const router = (
     <Provider store={store}>

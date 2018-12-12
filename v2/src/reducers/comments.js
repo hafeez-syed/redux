@@ -24,7 +24,7 @@ function comments (state = [], action) {
 	    return {
 		    ...state,
 		    [commentId]: postComments(state[commentId], action)
-	    }
+	    };
     }
     return state;
 }
