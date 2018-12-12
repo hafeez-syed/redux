@@ -17,8 +17,8 @@ To See the production app running run `npm run serve` and open <localhost:5000> 
 ## Screenshots
 
 
-![](https://github.com/hafeez-syed/redux/blob/master/v2/screenshots/home.png)
+![](https://github.com/hafeez-syed/redux/blob/master/screenshots/home.png)
 
 <hr />
 
-![](https://github.com/hafeez-syed/redux/tree/master/v2/screenshots/details.png)
+![](https://github.com/hafeez-syed/redux/blob/master/screenshots/details.png)
