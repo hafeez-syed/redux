@@ -8,7 +8,7 @@ const Photo = React.createClass({
         return(
             <figure className="grid-figure">
                 <div className="grid-photo-wrap">
-                    <Link to={`/view/${post.code}`}>
+                    <Link to={`/reduxstagram/view/${post.code}`}>
                         <img src={post.display_src} alt={post.caption} className="grid-photo" />
                     </Link>
 
@@ -22,7 +22,7 @@ const Photo = React.createClass({
                         <p>{post.caption}</p>
                         <div className="control-buttons">
                             <button className="likes" onClick={this.props.increment.bind(null, index)}>&hearts; {post.likes}</button>
-                            <Link to={`/view/${post.code}`} className="button">
+                            <Link to={`/reduxstagram/view/${post.code}`} className="button">
                                 <span className="comment-count">
                                     <span className="speech-bubble">
                                         {comments[post.code] ? comments[post.code].length : 0}

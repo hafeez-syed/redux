@@ -11,9 +11,9 @@ import { App, Single, PhotoGrid } from './components/';
 const router = (
     <Provider store={store}>
         <Router history={history}>
-            <Route path="/" component={App}>
+            <Route path="/reduxstagram" component={App}>
                 <IndexRoute component={PhotoGrid}></IndexRoute>
-                <Route path="/view/:postId" component={Single}></Route>
+                <Route path="/reduxstagram/view/:postId" component={Single}></Route>
             </Route>
         </Router>  
     </Provider>   

@@ -9,12 +9,15 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
-    "serve": "serve -s ./build"
+    "serve": "serve -s ./build/reduxstagram",
+    "prod": "react-scripts build && sh script.sh reduxstagram",
+    "deploy-manual": "aws s3 cp --recursive build/ s3://hafeezsyed.com"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/hafeez-syed/redux/tree/master/v2"
   },
+  "homepage": "/reduxstagram/",
   "author": "Hafeez Syed",
   "license": "MIT",
   "dependencies": {
