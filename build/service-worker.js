@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/reduxstagram/precache-manifest.785ec5c11b840573263c194a72ca200e.js"
+  "/reduxstagram/precache-manifest.00d4898b7f2b3729210f6bb0611c1f64.js"
 );
 
 workbox.clientsClaim();

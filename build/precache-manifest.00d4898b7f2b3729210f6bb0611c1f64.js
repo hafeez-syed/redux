@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/reduxstagram/static/js/runtime~main.2912c546.js"
   },
   {
-    "revision": "702f6b9c81934473d6c3",
-    "url": "/reduxstagram/static/js/main.702f6b9c.chunk.js"
+    "revision": "1e1837cd6d108b234baa",
+    "url": "/reduxstagram/static/js/main.1e1837cd.chunk.js"
   },
   {
     "revision": "c1d8b6090245c168c73c",
     "url": "/reduxstagram/static/js/1.c1d8b609.chunk.js"
   },
   {
-    "revision": "702f6b9c81934473d6c3",
-    "url": "/reduxstagram/static/css/main.f843279b.chunk.css"
+    "revision": "1e1837cd6d108b234baa",
+    "url": "/reduxstagram/static/css/main.655fdec3.chunk.css"
   },
   {
-    "revision": "b9b431fe88b85c34b4a26ed37204d0aa",
+    "revision": "8a48bfaa11a2c99d1f9475e258352eb3",
     "url": "/reduxstagram/index.html"
   }
 ];
