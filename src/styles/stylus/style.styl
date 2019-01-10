@@ -22,6 +22,9 @@ body
   box-shadow 0 0 0 5px rgba(0,0,0,0.03);
   position relative
 
+  @media screen and (max-width: 576px)
+    flex-basis calc(50% - 4rem)
+
 .single-photo
   @extend .grid-figure
   max-width 900px
