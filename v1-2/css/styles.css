@@ -1,0 +1,25 @@
+body {
+    font-family: Calibri;
+}
+
+#counter {
+}
+
+#todo-list {
+}
+
+#todo-list li {
+    background-color: azure;
+    border: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#todo-list span {
+    display: block;
+    height: 50px;
+}
+
+.strike-through {
+    text-decoration: line-through;
+}

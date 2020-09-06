@@ -9,7 +9,8 @@ import { createStore } from 'redux';
 import styles from '../css/styles.css';
 
 // CreateCustomStore is similar to Redux's createStore
-const counterStore = CreateCustomStore(CounterReducer);
+//const counterStore = CreateCustomStore(CounterReducer);
+const counterStore = createStore(CounterReducer);
 const todoStore = createStore(TodoReducer);
 
 
